@@ -45,7 +45,7 @@ export default function AnimatedCounter({
     }
   }, [from, to, durationMs])
 
-  const formatted = new Intl.NumberFormat("et-EE").format(value)
+  const formatted = new Intl.NumberFormat("lt-LT").format(value)
 
   return <span className={className}>{formatted}</span>
 }

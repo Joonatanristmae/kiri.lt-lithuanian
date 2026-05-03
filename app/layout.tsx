@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vihku – Free notebooks for high school students",
-  description: "We give away free notebooks to high school students with your advertising. Formula sheet, ruler and useful ads.",
+  title: "Kiri – Nemokami sąsiuviniai studentams",
+  description: "Daliname nemokamus sąsiuvinius studentams su jūsų reklama. Formulių lapas, liniuotė ir naudinga informacija.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="lt">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

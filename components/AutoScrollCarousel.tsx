@@ -13,6 +13,8 @@ type CarouselImage = {
 type AutoScrollCarouselProps = {
   images: CarouselImage[]
   wrapperClassName?: string
+  /** Horizontal gap (px) between slides. Default from breakpoints. */
+  slideSpacing?: number
 }
 
 function createMomentumAutoScrollPlugin(defaultSpeed: number) {
@@ -78,6 +80,7 @@ function createMomentumAutoScrollPlugin(defaultSpeed: number) {
 export default function AutoScrollCarousel({
   images,
   wrapperClassName = "w-full py-10",
+  slideSpacing,
 }: AutoScrollCarouselProps) {
   const loopedImages = useMemo(
     () => [...images, ...images],
@@ -89,6 +92,7 @@ export default function AutoScrollCarousel({
     [],
   )
 
+  const spacing = slideSpacing ?? 100
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
@@ -97,19 +101,19 @@ export default function AutoScrollCarousel({
       mode: "free",
       slides: {
         perView: 3,
-        spacing: 100,
+        spacing,
       },
       breakpoints: {
         "(max-width: 640px)": {
           slides: {
             perView: 2,
-            spacing: 16,
+            spacing: slideSpacing ?? 16,
           },
         },
         "(min-width: 1024px)": {
           slides: {
-            perView: 5,
-            spacing: 32,
+            perView: slideSpacing != null ? 4 : 5,
+            spacing: slideSpacing ?? 32,
           },
         },
       },

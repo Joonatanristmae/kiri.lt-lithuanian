@@ -4,148 +4,140 @@ import AnimatedCounter from '../components/AnimatedCounter'
 
 export default function Home() {
   const topRowLogos = [
-    { src: '/reklaampartnerid/autosõit.svg', alt: 'Autosõit' },
-    { src: '/reklaampartnerid/tallinna ülikool.svg', alt: 'Tallinn University' },
-    { src: '/reklaampartnerid/tallinna_ehituskool_logo_vector_mp.svg', alt: 'Tallinn School of Construction' },
-    { src: '/reklaampartnerid/tartu ülikool.svg', alt: 'University of Tartu' },
-    { src: '/reklaampartnerid/kaitsevägi.svg', alt: 'Estonian Defence Forces' },
-    { src: '/reklaampartnerid/peaasi.svg', alt: 'MTÜ Peaasi' },
-    { src: '/reklaampartnerid/bfm-kaksik-eng.svg', alt: 'BFM' }
+    { src: '/reklaampartnerid/bfm-kaksik-eng.svg', alt: 'BFM' },
+    { src: '/reklaampartnerid/kaitsevägi.svg', alt: 'Estijos gynybos pajėgos' },
+    { src: '/reklaampartnerid/tallinna%20ülikool.svg', alt: 'Talino universitetas' },
+    { src: '/reklaampartnerid/UT_website_logo_blue_eng.svg', alt: 'Tartu universitetas' },
   ]
-  const bottomRowLogos =  [
-    { src: '/reklaampartnerid/okoloogia-ja-maateaduste-instituut.png', alt: 'Institute of Ecology and Earth Sciences' },
+  const bottomRowLogos = [
     { src: '/reklaampartnerid/johan_skytte.png', alt: 'Johan Skytte' },
-    { src: '/reklaampartnerid/venividivici.png', alt: 'VeniVidiVici' },
-    { src: '/reklaampartnerid/üti.png', alt: 'ÜTI' },
-    { src: '/reklaampartnerid/tktk.png', alt: 'Tallinn University of Technology' },
-    { src: '/reklaampartnerid/tallinna tervishoiu kõrgkool.png', alt: 'Tallinn Health Care College' },
+    { src: '/reklaampartnerid/tallinna%20tervishoiukõrgkool.png', alt: 'Talino sveikatos priežiūros kolegija' },
+    { src: '/reklaampartnerid/TTK_logo.png', alt: 'Talino technologijos universitetas' },
+    { src: '/reklaampartnerid/ökoloogia%20ja%20maateadused.png', alt: 'Ekologijos ir žemės mokslų institutas' },
   ]
 
-  const schoolLogos = [
-    { src: '/koolid/gag-logo.svg', alt: 'Gustav Adolf Gymnasium' },
-    { src: '/koolid/loksa-logo.svg', alt: 'Loksa Gymnasium' },
-    { src: '/koolid/kehra-logo.svg', alt: 'Kehra Gymnasium' },
-    { src: '/koolid/tamme-logo.svg', alt: 'Tartu Tamme School' },
-    { src: '/koolid/hugo-logo.svg', alt: 'Hugo Treffner Gymnasium' },
-    { src: '/koolid/peterson-logo.svg', alt: 'Tartu Karlova School / Peterson' },
-    { src: '/koolid/laagna-logo.svg', alt: 'Laagna Gymnasium' },
-    { src: '/koolid/mustamäe-logo-1.svg', alt: 'Mustamäe Gymnasium' },
-    { src: '/koolid/westholm-logo.svg', alt: 'Tallinn Westholm Gymnasium' },
-    { src: '/koolid/arte-logo.svg', alt: 'Tallinn Arte Gymnasium' },
-    { src: '/koolid/härma-logo.svg', alt: 'Miina Härma Gymnasium' },
-    { src: '/koolid/taiskasvanute-tartu-logo.svg', alt: 'Tartu Adult Gymnasium' },
-    { src: '/koolid/lähte-logo.svg', alt: 'Lähte School' },
-    { src: '/koolid/nõo-logo.svg', alt: 'Nõo Secondary School' },
-    { src: '/koolid/merekool-logo.svg', alt: 'Maritime School' },
-    { src: '/koolid/annelinna-logo.svg', alt: 'Annelinna Gymnasium' },
-    { src: '/koolid/jaan poska gümnaasium 1.svg', alt: 'Jaan Poska Gymnasium' },
-    { src: '/koolid/keila-logo.svg', alt: 'Keila School' },
-    { src: '/koolid/pelgulinna-logo.svg', alt: 'Pelgulinna Gymnasium' },
-    { src: '/koolid/luunja-logo.svg', alt: 'Luunja School' },
-    { src: '/koolid/mustamäe-logo.svg', alt: 'Mustamäe School' },
-    { src: '/koolid/kose-logo.svg', alt: 'Kose Gymnasium' },
-    { src: '/koolid/vanalinna-täiskasvanute-logo.svg', alt: 'Vanalinn Adult Gymnasium' },
-    { src: '/koolid/tabasalu-logo.svg', alt: 'Tabasalu School' },
-    { src: '/koolid/elva-logo.svg', alt: 'Elva Gymnasium' },
-    { src: '/koolid/õismäe-logo.svg', alt: 'Õismäe School' },
-    { src: '/koolid/ülenurme-logo.svg', alt: 'Ülenurme Gymnasium' },
-    { src: '/koolid/rõngu-logo.svg', alt: 'Rõngu Secondary School' },
+  const schoolLogos: {
+    src: string
+    alt: string
+    /** Wide banner logos: span full row so object-contain height isn’t crushed */
+    colSpan?: 2
+    /** Taller cap inside the cell */
+    large?: boolean
+  }[] = [
+    { src: '/universities/Kaunas.png', alt: 'Kaunas' },
+    { src: '/universities/ku_primary_positive.png', alt: 'KU' },
+    {
+      src: '/universities/lithuanian-university-of-health-sciences-logo-png_seeklogo-511631.png',
+      alt: 'Lietuvos sveikatos mokslų universitetas',
+      colSpan: 2,
+    },
+    { src: '/universities/VILNIUS-TECH-LT.png', alt: 'Vilniaus TECH' },
+    { src: '/universities/vilnius-university-seeklogo-cropped.svg', alt: 'Vilniaus universitetas', large: true },
+    { src: '/universities/Vytaytas%20Magnus%20University.png', alt: 'Vytauto Didžiojo universitetas' },
   ]
-
-  const schoolMidpoint = Math.ceil(schoolLogos.length / 2)
-  const schoolTopRow = schoolLogos.slice(0, schoolMidpoint)
-  const schoolBottomRow = schoolLogos.slice(schoolMidpoint)
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      <section className="border-b border-slate-200/80 bg-white">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 px-4 py-24 md:flex-row md:items-start">
-          <div className="flex-1 space-y-6 text-center md:text-left">
-            <div className="flex justify-center md:justify-start mb-12">
+      <header className="border-b border-slate-200/80 bg-white">
+        <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
+          <a href="/" className="flex shrink-0">
+            <Image
+              src="/kiri%20logo.svg"
+              alt="Kiri logo"
+              width={360}
+              height={96}
+              className="h-24 w-auto object-contain"
+              priority
+            />
+          </a>
+          <div className="flex flex-col items-end gap-0.5 text-sm text-slate-600 sm:flex-row sm:items-center sm:gap-6">
+            <a href="mailto:info@kiri.lt" className="hover:text-slate-900 transition-colors">
+              info@kiri.lt
+            </a>
+            <a href="tel:+37065671988" className="hover:text-slate-900 transition-colors">
+              +370 656 71988
+            </a>
+          </div>
+        </div>
+      </header>
+      <div className="border-b border-slate-200/80 bg-gradient-to-b from-white from-[35%] to-slate-50">
+        <section>
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 px-4 pt-20 pb-2 sm:pt-24 sm:pb-3 md:flex-row md:items-start md:pb-4">
+            <div className="flex-1 space-y-6 text-center md:text-left">
+              <h1 className="text-3xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                Daliname nemokamus sąsiuvinius
+                studentams su <em className="font-semibold italic text-blue-600"> jūsų reklama</em>
+              </h1>
+            </div>
+            <div className="flex-1 w-full">
               <Image
-                src="/vihku%20logo.svg"
-                alt="Vihku logo"
-                width={220}
-                height={59}
-                className="h-14 w-auto"
+                src="/Group%2070.svg"
+                alt=""
+                width={960}
+                height={720}
+                className="w-full h-auto object-contain scale-110 origin-top md:-mb-1"
                 priority
               />
             </div>
-            <h1 className="text-3xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              We give away free notebooks to university
-              students with <em className="font-semibold italic text-blue-600"> your advertising</em>
-            </h1>
           </div>
-          <div className="flex-1 md:mt-[8rem]">
-            <Image
-              src="/Group%2070.svg"
-              alt=""
-              width={960}
-              height={720}
-              className="w-full h-auto object-contain scale-110 origin-top"
-              priority
-            />
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="border-b border-slate-200/80 bg-slate-50 py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-8">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-stretch">
-            <div className="flex flex-col justify-center">
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">What is Vihku?</h2>
-              <div className="h-1 w-12 rounded-full bg-blue-500 mb-6" aria-hidden />
-              <div className="mb-6 flex flex-wrap items-baseline gap-2 text-blue-600">
-                <span className="text-xl font-semibold sm:text-2xl text-slate-700">
-                  Every year,
-                </span>
-                <AnimatedCounter
-                  to={20000}
-                  durationMs={2000}
-                  className="text-4xl font-extrabold sm:text-5xl text-blue-600"
+        <section className="pb-16 pt-2 sm:pb-20 sm:pt-3 md:pt-4">
+          <div className="mx-auto max-w-5xl px-4 sm:px-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-stretch md:gap-10">
+              <div className="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200/60 order-2 md:order-1 md:-mt-1">
+                <Image
+                  src="/vihikud%20murus.jpeg"
+                  alt="Sąsiuvinių krūva"
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover"
                 />
-                <span className="text-xl font-semibold sm:text-2xl text-slate-700">
-                  notebooks find an owner
-                </span>
               </div>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Vihku is a free notebook for high school students that we can distribute thanks to the ads inside.
-              </p>
-              <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-                Each Vihku includes a formula sheet and a ruler. We only run useful ads: social campaigns, interest-based
-                education and further study opportunities.
-              </p>
-            </div>
-            <div className="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200/60">
-              <Image
-                src="/vihikud%20murus.jpeg"
-                alt="Stack of Vihku notebooks"
-                width={800}
-                height={600}
-                className="h-full w-full object-cover"
-              />
+              <div className="flex flex-col justify-center order-1 md:order-2">
+                <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Kas yra Kiri?</h2>
+                <div className="h-1 w-12 rounded-full bg-blue-500 mb-6" aria-hidden />
+                <div className="mb-6 flex flex-wrap items-baseline gap-2 text-blue-600">
+                  <span className="text-xl font-semibold sm:text-2xl text-slate-700">
+                    Kasmet
+                  </span>
+                  <AnimatedCounter
+                    to={20000}
+                    durationMs={2000}
+                    className="text-4xl font-extrabold sm:text-5xl text-blue-600"
+                  />
+                  <span className="text-xl font-semibold sm:text-2xl text-slate-700">
+                    sąsiuvinių randa savo šeimininką
+                  </span>
+                </div>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  Kiri yra nemokamas sąsiuvinis studentams, kurį galime dalinti dėl jame esančių reklamų.
+                </p>
+                <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section className="py-20 border-b border-slate-200/80 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Want to become a partner?</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Norite tapti partneriu?</h2>
           <div className="h-1 w-12 rounded-full bg-blue-500 mb-8" aria-hidden />
           <div className="mt-10">
-            <h3 className="text-xl font-semibold text-slate-800 mb-2">Price list</h3>
+            <h3 className="text-xl font-semibold text-slate-800 mb-2">Kainoraštis</h3>
             <p className="mb-8 text-lg text-slate-600">
-              Prices are per 5,000 notebooks.
+              Kainos nurodytos už 5 000 sąsiuvinių.
             </p>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {[
-                { src: '/hinnakiri/esikaas.png', alt: 'Front cover price list' },
-                { src: '/hinnakiri/tagakaas.png', alt: 'Back cover price list' },
-                { src: '/hinnakiri/tagakaane-sisekulg.png', alt: 'Back cover inner page price list' },
-                { src: '/hinnakiri/tavaleht.png', alt: 'Standard page price list' },
-                { src: '/hinnakiri/valemileht.png', alt: 'Formula sheet price list' },
-                { src: '/hinnakiri/vaheleht.png', alt: 'Insert page price list' },
+                { src: '/hinnakiri/esikaas.svg', alt: 'Priekinio viršelio kainoraštis' },
+                { src: '/hinnakiri/tagakaas.svg', alt: 'Galinio viršelio kainoraštis' },
+                { src: '/hinnakiri/tagakaane%20sisekülg.svg', alt: 'Galinio viršelio vidinės pusės kainoraštis' },
+                { src: '/hinnakiri/tavaleht.svg', alt: 'Paprasto puslapio kainoraštis' },
+                { src: '/hinnakiri/valemileht.svg', alt: 'Formulių lapo kainoraštis' },
+                { src: '/hinnakiri/vaheleht.svg', alt: 'Įklijos lapo kainoraštis' },
               ].map(({ src, alt }) => (
                 <div key={src} className="overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-200/60">
                   <Image
@@ -164,28 +156,27 @@ export default function Home() {
 
       <section className="py-20 border-b border-slate-200/80 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Previous advertising partners</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Ankstesni reklamos partneriai</h2>
           <div className="h-1 w-12 rounded-full bg-blue-500 mb-8" aria-hidden />
+          <p className="mb-8 max-w-2xl text-lg text-slate-600 leading-relaxed">
+            Ankstesni reklamos partneriai yra Estijoje. 2026 metais pasieksime ir Lietuvą!
+          </p>
           <div className="mt-4">
-            <AutoScrollCarousel images={topRowLogos} wrapperClassName="w-full" />
-            <AutoScrollCarousel images={bottomRowLogos} wrapperClassName="w-full" />
+            <AutoScrollCarousel images={topRowLogos} wrapperClassName="w-full" slideSpacing={48} />
+            <AutoScrollCarousel images={bottomRowLogos} wrapperClassName="w-full" slideSpacing={48} />
           </div>
         </div>
       </section>
 
       <section className="py-20 border-b border-slate-200/80 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Notebook distribution</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Sąsiuvinių platinimas</h2>
           <div className="h-1 w-12 rounded-full bg-blue-500 mb-8" aria-hidden />
           <div className="space-y-10">
             <div className="space-y-4 max-w-2xl">
               <p className="text-lg text-slate-600 leading-relaxed">
-                Notebooks reach high school students in cooperation with the Estonian Union of Student Councils – no need
-                to worry about Vihkud gathering dust on a shelf.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                We place notebooks in easily accessible spots – libraries, foyers, atriums and busy corridors – so
-                students can take them freely.
+                Sąsiuvinius paliekame lengvai prieinamose vietose - bibliotekose, fojė, atriumuose ir judriuose
+                koridoriuose - kad studentai galėtų juos laisvai pasiimti.
               </p>
             </div>
 
@@ -193,7 +184,7 @@ export default function Home() {
               <div className="overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200/60 shadow-sm">
                 <Image
                   src="/vihikud%20treffneris.jpg"
-                  alt="Notebooks available to students at school"
+                  alt="Studentams prieinami sąsiuviniai universitete"
                   width={900}
                   height={600}
                   className="h-full w-full object-cover"
@@ -201,10 +192,32 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
-                  Some schools where Vihkud reach students
+                  Universitetai, kuriuose Kiri sąsiuviniai pasieks studentus
                 </p>
-                <AutoScrollCarousel images={schoolTopRow} wrapperClassName="w-full" />
-                <AutoScrollCarousel images={schoolBottomRow} wrapperClassName="w-full" />
+                <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
+                  {schoolLogos.map(({ src, alt, colSpan, large }) => (
+                    <div
+                      key={src}
+                      className={`flex min-h-[7rem] w-full items-center justify-center px-1 ${
+                        colSpan === 2 ? 'col-span-2' : ''
+                      }`}
+                    >
+                      <Image
+                        src={src}
+                        alt={alt}
+                        width={480}
+                        height={120}
+                        className={
+                          colSpan === 2
+                            ? 'h-[4.75rem] w-full max-h-[4.75rem] object-contain sm:h-[5.25rem] sm:max-h-[5.25rem]'
+                            : large
+                              ? 'h-[5.5rem] w-full max-h-[5.5rem] object-contain sm:h-24 sm:max-h-24'
+                              : 'h-16 w-full max-h-16 object-contain sm:h-[4.25rem] sm:max-h-[4.25rem]'
+                        }
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -213,13 +226,13 @@ export default function Home() {
 
       <section className="py-20 border-b border-slate-200/80 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Our team</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Mūsų komanda</h2>
           <div className="h-1 w-12 rounded-full bg-blue-500 mb-10" aria-hidden />
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
             {[
-              { src: '/meie fotod/joonatan.jpg', name: 'Joonatan Ristmäe' },
-              { src: '/meie fotod/kazimieras.jpg', name: 'Kazimieras Jasaitis' },
-            ].map(({ src, name }) => (
+              { src: '/meie fotod/joonatan.jpg', name: 'Joonatan Ristmäe', zoom: true },
+              { src: '/meie fotod/kazimieras.jpg', name: 'Kazimieras Jasaitis', zoom: false },
+            ].map(({ src, name, zoom }) => (
               <div key={name} className="flex flex-col items-center text-center group">
                 <div className="h-40 w-40 overflow-hidden rounded-full bg-slate-200 ring-4 ring-white shadow-lg shadow-slate-200/50">
                   <Image
@@ -227,7 +240,7 @@ export default function Home() {
                     alt={name}
                     width={320}
                     height={320}
-                    className="h-full w-full object-cover"
+                    className={`h-full w-full object-cover ${zoom ? 'scale-150 object-[center_70%]' : ''}`}
                   />
                 </div>
                 <p className="mt-5 text-lg font-semibold text-slate-800">{name}</p>
@@ -239,13 +252,13 @@ export default function Home() {
 
       <footer className="py-10 bg-slate-900 text-slate-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-          <span className="font-medium text-slate-400">© {new Date().getFullYear()} Vihku</span>
+          <span className="font-medium text-slate-400">© {new Date().getFullYear()} Kiri</span>
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-            <a href="mailto:info@vihku.ee" className="hover:text-white transition-colors">
-              info@vihku.ee
+            <a href="mailto:info@kiri.lt" className="hover:text-white transition-colors">
+              info@kiri.lt
             </a>
-            <a href="tel:+37253048150" className="hover:text-white transition-colors">
-              +372 5304 8150
+            <a href="tel:+37065671988" className="hover:text-white transition-colors">
+              +370 656 71988
             </a>
           </div>
         </div>
