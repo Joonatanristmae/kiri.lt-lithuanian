@@ -12,8 +12,8 @@ export default function Home() {
   const bottomRowLogos = [
     { src: '/reklaampartnerid/johan_skytte.png', alt: 'Johan Skytte' },
     { src: '/reklaampartnerid/tallinna%20tervishoiukõrgkool.png', alt: 'Talino sveikatos priežiūros kolegija' },
-    { src: '/reklaampartnerid/TTK_logo.png', alt: 'Talino technologijos universitetas' },
-    { src: '/reklaampartnerid/ökoloogia%20ja%20maateadused.png', alt: 'Ekologijos ir žemės mokslų institutas' },
+    { src: '/reklaampartnerid/TTK_logo.png', alt: 'Talino technikos universitetas' },
+    { src: '/reklaampartnerid/ökoloogia%20ja%20maateadused.png', alt: 'Tartu universiteto Ekologijos ir žemės mokslų institutas' },
   ]
 
   const schoolLogos: {
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 px-4 pt-20 pb-2 sm:pt-24 sm:pb-3 md:flex-row md:items-start md:pb-4">
             <div className="flex-1 space-y-6 text-center md:text-left">
               <h1 className="text-3xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                Daliname nemokamus sąsiuvinius
+                Dalijame nemokamus sąsiuvinius
                 studentams su <em className="font-semibold italic text-blue-600"> jūsų reklama</em>
               </h1>
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
               <div className="overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200/60 order-2 md:order-1 md:-mt-1">
                 <Image
                   src="/vihikud%20murus.jpeg"
-                  alt="Sąsiuvinių krūva"
+                  alt="Sąsiuvinių šūsnis"
                   width={800}
                   height={600}
                   className="h-full w-full object-cover"
@@ -111,7 +111,7 @@ export default function Home() {
                   </span>
                 </div>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Kiri yra nemokamas sąsiuvinis studentams, kurį galime dalinti dėl jame esančių reklamų.
+                  Kiri – Estijoje gimusi iniciatyva, jau kelerius metus dalijanti studentams nemokamus sąsiuvinius. Tai įmanoma dėl juose skelbiamų reklamų.
                 </p>
                 <p className="mt-4 text-lg text-slate-600 leading-relaxed">
                 </p>
@@ -128,16 +128,16 @@ export default function Home() {
           <div className="mt-10">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">Kainoraštis</h3>
             <p className="mb-8 text-lg text-slate-600">
-              Kainos nurodytos už 5 000 sąsiuvinių.
+              Visos kainos nurodytos už 5 000 sąsiuvinių tiražą.
             </p>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {[
-                { src: '/hinnakiri/esikaas.svg', alt: 'Priekinio viršelio kainoraštis' },
-                { src: '/hinnakiri/tagakaas.svg', alt: 'Galinio viršelio kainoraštis' },
-                { src: '/hinnakiri/tagakaane%20sisekülg.svg', alt: 'Galinio viršelio vidinės pusės kainoraštis' },
-                { src: '/hinnakiri/tavaleht.svg', alt: 'Paprasto puslapio kainoraštis' },
-                { src: '/hinnakiri/valemileht.svg', alt: 'Formulių lapo kainoraštis' },
-                { src: '/hinnakiri/vaheleht.svg', alt: 'Įklijos lapo kainoraštis' },
+                { src: '/hinnakiri/esikaas.svg', alt: 'Priekinio viršelio kainos' },
+                { src: '/hinnakiri/tagakaas.svg', alt: 'Galinio viršelio kainos' },
+                { src: '/hinnakiri/tagakaane%20sisekülg.svg', alt: 'Vidinės galinio viršelio pusės kainos' },
+                { src: '/hinnakiri/tavaleht.svg', alt: 'Vidinio puslapio kainos' },
+                { src: '/hinnakiri/valemileht.svg', alt: 'Formulių lapo kainos' },
+                { src: '/hinnakiri/vaheleht.svg', alt: 'Įklijos lapo kainos' },
               ].map(({ src, alt }) => (
                 <div key={src} className="overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-200/60">
                   <Image
@@ -159,7 +159,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 mb-1">Ankstesni reklamos partneriai</h2>
           <div className="h-1 w-12 rounded-full bg-blue-500 mb-8" aria-hidden />
           <p className="mb-8 max-w-2xl text-lg text-slate-600 leading-relaxed">
-            Ankstesni reklamos partneriai yra Estijoje. 2026 metais pasieksime ir Lietuvą!
+            Iki šiol „Kiri“ reklamos partneriai buvo Estijoje, kur iniciatyva jau spėjo įsitvirtinti. 2026-aisiais pasieksime ir Lietuvą!
           </p>
           <div className="mt-4">
             <AutoScrollCarousel images={topRowLogos} wrapperClassName="w-full" slideSpacing={48} />
@@ -175,8 +175,8 @@ export default function Home() {
           <div className="space-y-10">
             <div className="space-y-4 max-w-2xl">
               <p className="text-lg text-slate-600 leading-relaxed">
-                Sąsiuvinius paliekame lengvai prieinamose vietose - bibliotekose, fojė, atriumuose ir judriuose
-                koridoriuose - kad studentai galėtų juos laisvai pasiimti.
+                Sąsiuvinius paliekame studentams lengvai prieinamose vietose – bibliotekose, fojė ir judriuose
+                koridoriuose, – kad kiekvienas galėtų laisvai juos pasiimti tik prireikus.
               </p>
             </div>
 
@@ -184,7 +184,7 @@ export default function Home() {
               <div className="overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200/60 shadow-sm">
                 <Image
                   src="/vihikud%20treffneris.jpg"
-                  alt="Studentams prieinami sąsiuviniai universitete"
+                  alt="Studentams universitete palikti Kiri sąsiuviniai"
                   width={900}
                   height={600}
                   className="h-full w-full object-cover"
@@ -192,7 +192,7 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
-                  Universitetai, kuriuose Kiri sąsiuviniai pasieks studentus
+                  Universitetai, kuriuose Kiri sąsiuviniai pasieks Lietuvos studentus
                 </p>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
                   {schoolLogos.map(({ src, alt, colSpan, large }) => (

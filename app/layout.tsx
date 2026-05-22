@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kiri – Nemokami sąsiuviniai studentams",
-  description: "Daliname nemokamus sąsiuvinius studentams su jūsų reklama. Formulių lapas, liniuotė ir naudinga informacija.",
+  title: "Kiri – nemokami sąsiuviniai Lietuvos studentams",
+  description: "Iš Estijos į Lietuvą atkeliaujanti „Kiri“ iniciatyva dalija studentams nemokamus sąsiuvinius su jūsų reklama. Sąsiuvinyje – formulių lapas, liniuotė ir kita naudinga informacija.",
 };
 
 export default function RootLayout({
